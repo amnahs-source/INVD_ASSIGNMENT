@@ -1,0 +1,116 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --taskify-primary: #6c5ce7; 
+    --taskify-success: #13ba81; 
+    --taskify-orange: #f7a300; 
+    --taskify-info: #007bff; 
+    --taskify-dark-text: #212529;
+}
+
+body {
+    font-family: 'Inter', sans-serif; 
+    padding-bottom: 70px; 
+}
+
+[data-bs-theme="light"] body {
+    background: linear-gradient(to bottom right, #e9ecef, #dcc2f3); 
+}
+
+[data-bs-theme="dark"] body {
+    background: linear-gradient(to bottom right, #212529, #1c1f23); 
+}
+
+.title {
+    font-family: "Anton SC", sans-serif !important;
+    font-size: 42px;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.dark-mode-toggle {
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: inherit;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    transition: color 0.3s;
+}
+
+.dark-mode-toggle:hover {
+    color: var(--taskify-primary);
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+.navbar .nav-link.active {
+    color: var(--taskify-primary) !important;
+    font-weight: bold;
+    border-bottom: 2px solid var(--taskify-primary);
+    padding-bottom: 6px;
+}
+
+.card-subject {
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-subject:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.custom-table-header {
+    background-color: var(--bs-body-tertiary);
+    border-color: var(--bs-border-color);
+}
+
+.table-hover > tbody > tr:hover {
+    --bs-table-hover-bg: var(--bs-body-tertiary);
+}
+
+.description-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.content-background {
+    background-color: var(--bs-body-bg);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.note {
+    font-size: 1.2rem; 
+    font-weight: bold;
+    color: var(--taskify-primary);
+}
+
+.footer {
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1030;
+    border-top: 1px solid var(--bs-border-color);
+    background-color: var(--bs-body-bg); 
+    color: var(--bs-body-color);
+}
