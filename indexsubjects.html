@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Users List - My Planner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Momo+Trust+Display&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="subjects.css"/>
+    <style>
+        .dark-mode-toggle {
+            cursor: pointer;
+            border:none;
+            background: none;
+            color: inherit ;
+        }
+    </style>
+  </head> 
+  <body>
+    
+    <div class="container my-4">
+        <div class="title">My Planner</div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <img src="img/logo.jpeg" width="50px">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="indexDashboard.html">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="indextasklist.html">Task List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="indexsubjects.html">Subjects</a>
+        </li>
+      </ul>
+      <div class="d-flex align-items-center">
+        <a href="index.html" class="btn btn-sm btn-outline-danger me-2">
+            <i class="bi bi-box-arrow-right"></i> Log Out
+        </a>
+        <button class="dark-mode-toggle" id="DarkModeToggle" title="Toggle Dark Mode">
+            <i class="bi bi-moon-stars-fill" id="darkModeIcon"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+   <div class="container my-5">
+        <div class="card shadow-sm p-4 border-0">
+            <h4 class="mb-4 fw-bold">Academic Subject Catalogue</h4>
+            
+            <div class="table-responsive">
+                <table class="table table-hover align-middle table-compact">
+                    <thead class="table-light">
+                        <tr>
+                            <th scope="col">Code</th>
+                            <th scope="col">Course Title</th>
+                            <th scope="col">Credit Hours</th>
+                            <th scope="col" class="d-none d-sm-table-cell">Lecturer</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>IMS 560</td>
+                            <td>Information Management Systems</td>
+                            <td>3.0</td>
+                            <td class="d-none d-sm-table-cell">DR. ABDURRAHMAN</td>
+                            <td><span class="badge text-bg-success">Active</span></td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-outline-info" 
+                                    data-bs-toggle="popover" 
+                                    data-bs-title="IMS 560: Assessment" 
+                                    data-bs-content="Group Project: 40%, Individual Assignment: 30%, Final Exam: 30%">Details</button>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>IMS 564</td>
+                            <td>User Experience Design</td>
+                            <td>3.0</td>
+                            <td class="d-none d-sm-table-cell">MARLIA BINTI IDRUS</td>
+                            <td><span class="badge text-bg-success">Active</span></td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-outline-info" 
+                                    data-bs-toggle="popover" 
+                                    data-bs-title="IMS 564: Assessment" 
+                                    data-bs-content="UX Case Study: 60%, Class Participation: 10%, Mid-Term Test: 30%">Details</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>IMS 566</td>
+                            <td>Information System Project Management</td>
+                            <td>3.0</td>
+                            <td class="d-none d-sm-table-cell">KHAIRUL MIZAN</td>
+                            <td><span class="badge text-bg-success">Active</span></td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-outline-info" 
+                                    data-bs-toggle="popover" 
+                                    data-bs-title="IMS 566: Assessment" 
+                                    data-bs-content="System Development (Group): 50%, Presentation: 20%, Quizzes: 30%">Details</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>IMS 565</td>
+                            <td>Advanced Web Development</td>
+                            <td>4.0</td>
+                            <td class="d-none d-sm-table-cell">DR. MUHAMMAD ASYRAF</td>
+                            <td><span class="badge text-bg-success">Active</span></td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-outline-info" 
+                                    data-bs-toggle="popover" 
+                                    data-bs-title="IMS 565: Assessment" 
+                                    data-bs-content="Web Portfolio: 45%, Final Project: 45%, Attendance: 10%">Details</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ICM 572</td>
+                            <td>Gamification for Content Management</td>
+                            <td>3.0</td>
+                            <td class="d-none d-sm-table-cell">ZAHARI BIN MOHD AMIN</td>
+                            <td><span class="badge text-bg-warning">Elective</span></td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-outline-info" 
+                                    data-bs-toggle="popover" 
+                                    data-bs-title="ICM 572: Assessment" 
+                                    data-bs-content="Game Design Report: 70%, Presentation: 30%">Details</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>TMC 451</td>
+                            <td>Introductory Mandarin (Level 2) </td>
+                            <td>2.0</td>
+                            <td class="d-none d-sm-table-cell">HO WEE CHEE</td>
+                            <td><span class="badge text-bg-success">Active</span></td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-outline-info" 
+                                    data-bs-toggle="popover" 
+                                    data-bs-title="TMC 451: Assessment" 
+                                    data-bs-content="Listening Test: 40%, Oral Test: 30%, Written Exam: 30%">Details</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>LCC 501</td>
+                            <td>English for Professional Correspondence</td>
+                            <td>2.0</td>
+                            <td class="d-none d-sm-table-cell">HALIZA BT AB GHANI</td>
+                            <td><span class="badge text-bg-success">Active</span></td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-outline-info" 
+                                    data-bs-toggle="popover" 
+                                    data-bs-title="LCC 501: Assessment" 
+                                    data-bs-content="Writing Task: 50%, Speaking Test: 30%, Attendance: 20%">Details</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>CTU 554</td>
+                            <td>Penghayatan Etika dan Peradaban</td>
+                            <td>2.0</td>
+                            <td class="d-none d-sm-table-cell">ANISAH IBRAHIM</td>
+                            <td><span class="badge text-bg-success">Active</span></td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-outline-info" 
+                                    data-bs-toggle="popover" 
+                                    data-bs-title="CTU 554: Assessment" 
+                                    data-bs-content="Group Presentation: 40%, Individual Essay: 40%, Final Test: 20%">Details</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                </table>
+            </div>
+            
+            <p class="text-muted mt-3">Total subjects registered: 8. </p>
+        </div>
+    </div>
+    <footer class="footer bg-body-tertiary text-body">
+    &copy; 2025 by <strong> INDIVIDUAL ASSIGNMENT </strong>. All rights reserved.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<script>
+        const darkModeToggle = document.getElementById('DarkModeToggle');
+        const darkModeIcon = document.getElementById ('darkModeIcon');
+        const htmlElement = document.documentElement;
+
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.setAttribute ('data-bs-theme', currentTheme);
+        updateIcon(currentTheme);
+        //toggle dark mode
+        DarkModeToggle.addEventListener('click',()=>{
+            const currentTheme = htmlElement.getAttribute ('data-bs-theme');
+            const newTheme = currentTheme === 'light' ? 'dark': 'light';
+
+            htmlElement.setAttribute ('data-bs-theme', newTheme);
+            localStorage.setItem('theme',newTheme);
+            updateIcon(newTheme);
+        });
+
+        function updateIcon (theme){
+            if (theme === 'dark') {
+                darkModeIcon.className = 'bi bi-sun-fill';
+            }else{
+                darkModeIcon.className = 'bi bi-moon-stars-fill';
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl, {
+                    trigger: 'focus' 
+                })
+            })
+        });
+    </script>
+    
+  </body>
+</html>
