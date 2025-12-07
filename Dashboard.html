@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Planner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Inter:wght@400;700&family=Momo+Trust+Display&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="dashboard.css"/>
+
+    </head> 
+    <body>
+    
+    <div class="container my-4">
+    <div class="title">My Planner</div>
+</div>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <img src="img/logo.jpeg" width="50px">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="dashboard.html">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="tasklist.html">Task List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="subjects.html">Subjects</a>
+        </li>
+      </ul>
+      <div class="d-flex align-items-center">
+        <a href="login.html" class="btn btn-sm btn-outline-danger me-2">
+            <i class="bi bi-box-arrow-right"></i> Log Out
+        </a>
+        <button class="dark-mode-toggle" id="DarkModeToggle" title="Toggle Dark Mode">
+            <i class="bi bi-moon-stars-fill" id="darkModeIcon"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container my-5">
+ <div class="row g-4 mb-5">
+    
+    <div class="col-lg-4 col-md-6">
+        <div class="card progress-card p-3 shadow-sm border-0">
+            <p class="card-date text-muted mb-1">Jan 21, 2026</p>
+            <h5 class="card-title fw-bold">Grouping Interview - IMS565</h5>
+
+            <div class="custom-progress-bar">
+                <div class="progress" role="progressbar" aria-label="Assignment Progress" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-green" style="width: 70%"></div>
+                </div>
+                <span class="progress-percent text-end fw-bold text-green">70%</span> 
+            </div>
+            
+            <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="progress-icons">
+                    <i class="bi bi-person-circle me-1"></i> 
+                    <i class="bi bi-pencil-square me-1"></i>
+                </div>
+                <span class="days-left badge p-2 text-green">44 days left</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+        <div class="card progress-card p-3 shadow-sm border-0">
+            <p class="card-date text-muted mb-1">Jan 19, 2026</p>
+            <h5 class="card-title fw-bold">Grouping CRUD - IMS566</h5>
+
+            <div class="custom-progress-bar">
+                <div class="progress" role="progressbar" aria-label="Mobile App Progress" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-purple" style="width: 30%"></div>
+                </div>
+                <span class="progress-percent text-end fw-bold text-purple">30%</span> 
+            </div>
+            
+            <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="progress-icons">
+                    <i class="bi bi-person-circle me-1"></i> 
+                    <i class="bi bi-pencil-square me-1"></i>
+                </div>
+                <span class="days-left badge p-2 text-purple">42 days left</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-12">
+        <div class="card progress-card p-3 shadow-sm border-0">
+            <p class="card-date text-muted mb-1">Dec 11, 2025</p>
+            <h5 class="card-title fw-bold">User Experience - IMS564</h5>
+
+            <div class="custom-progress-bar">
+                <div class="progress" role="progressbar" aria-label="Animation Progress" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-orange" style="width: 75%"></div>
+                </div>
+                <span class="progress-percent text-end fw-bold text-orange">75%</span> 
+            </div>
+            
+            <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="progress-icons">
+                    <i class="bi bi-person-circle me-1"></i> 
+                    <i class="bi bi-pencil-square me-1"></i>
+                </div>
+                <span class="days-left badge p-2 text-orange">4 days left</span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12">
+      <div class="card shadow-sm border-0 p-4">
+        <h5 class="fw-bold mb-3">Assignments List</h5>
+        <div class="list-group list-group-flush">
+          
+          <div class="list-group-item d-flex justify-content-between align-items-center">
+    <span class="text-success fw-semibold">
+        <i class="bi bi-check-circle-fill me-2"></i>IMS 566 (Advanced Web-Individual Assignment) - Complete & Submitted
+    </span>
+    <span class="badge text-bg-success">Done</span>
+</div>
+
+<div class="list-group-item d-flex justify-content-between align-items-center">
+    <span class="text-primary fw-semibold">
+        <i class="bi bi-clock-fill me-2"></i>ICM 572 (Game Design Report) - Draft Final Report
+    </span>
+    <span class="badge text-bg-primary">Ongoing</span>
+</div>
+
+<div class="list-group-item d-flex justify-content-between align-items-center">
+    <span class="text-primary fw-semibold">
+        <i class="bi bi-clock-fill me-2"></i>IMS 560 (Personas) - Group Project
+    </span>
+    <span class="badge text-bg-primary">Ongoing</span>
+</div>
+
+<div class="list-group-item d-flex justify-content-between align-items-center">
+    <span class="text-success fw-semibold">
+        <i class="bi bi-check-circle-fill me-2"></i>IMS 566 (Individual Project) - Submission
+    </span>
+    <span class="badge text-bg-success">Done</span>
+</div>
+
+        </div>
+        <a href="tasklist.html" class="btn btn-sm btn-outline-secondary mt-3 align-self-end">View All Tasks</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-3">
+  <div class="row g-4 justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow bg-body-tertiary border-0 h-100">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Visitor Count</h5>
+          <div> 
+            <canvas id="Chart1"></canvas>
+            <script>
+              const Chart1 = document.getElementById('Chart1');
+
+              new Chart(Chart1, {
+                type: 'bar',
+                data: {
+                  labels: ['Staff', 'Student', 'Lecturer'],
+                  datasets: [{
+                    label: 'Visitors',
+                    data: [150, 1450, 550], 
+                    borderWidth: 1,
+                    backgroundColor: [
+                        '#6c5ce7', 
+                        '#13ba81', 
+                        '#f7a300' 
+                    ]
+                  }]
+                },
+                options: {
+                  scales: {
+                    y: {
+                      beginAtZero: true
+                    }
+                  }
+                }
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+    <div class="card shadow bg-body-tertiary border-0 h-100">
+        <div class="card-body">
+            <h5 class="card-title fw-bold">Project Status</h5>
+            <div> 
+                <canvas id="Chart2"></canvas>
+                <script>
+                    const Chart2 = document.getElementById('Chart2');
+
+                    new Chart(Chart2, {
+                        type: 'pie', 
+                        data: {
+                            labels: ['Completed', 'Pending', 'On going'],
+                            datasets: [{
+                                label: 'Project Status',
+                                data: [2, 4, 2], 
+                                borderWidth: 1,
+                                backgroundColor: [
+                                    '#13ba81', 
+                                    '#f7a300', 
+                                    '#6c5ce7'  
+                                ]
+                            }]
+                        },
+                        options: {
+                            responsive: true, 
+                            maintainAspectRatio: true,
+                            plugins: {
+                                legend: {
+                                    display: true 
+                                }
+                            }
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div>
+<footer class="footer bg-body-tertiary text-body">
+&copy; 2025 by <strong> INDIVIDUAL ASSIGNMENT </strong>. All rights reserved.
+</footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<script>
+    const darkModeToggle = document.getElementById('DarkModeToggle');
+    const darkModeIcon = document.getElementById ('darkModeIcon');
+    const htmlElement = document.documentElement;
+
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    htmlElement.setAttribute ('data-bs-theme', currentTheme);
+    updateIcon(currentTheme);
+    //toggle dark mode
+    DarkModeToggle.addEventListener('click',()=>{
+        const currentTheme = htmlElement.getAttribute ('data-bs-theme');
+        const newTheme = currentTheme === 'light' ? 'dark': 'light';
+
+        htmlElement.setAttribute ('data-bs-theme', newTheme);
+        localStorage.setItem('theme',newTheme);
+        updateIcon(newTheme);
+    });
+
+    function updateIcon (theme){
+        if (theme === 'dark') {
+            darkModeIcon.className = 'bi bi-sun-fill';
+        }else{
+            darkModeIcon.className = 'bi bi-moon-stars-fill';
+        }
+    }
+</script>
+</body>
+</html>
